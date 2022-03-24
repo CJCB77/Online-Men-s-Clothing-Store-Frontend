@@ -5,6 +5,7 @@ import instagramIcon from "../imgs/socials/instagram.svg"
 import twitterIcon from "../imgs/socials/twitter.svg"
 import youtubeIcon from "../imgs/socials/youtube.svg"
 import pinterestIcon from "../imgs/socials/pinterest.svg"
+import footerLogo from "../imgs/footerLogo.svg"
 
 export default function Footer() {
   return (
@@ -69,6 +70,14 @@ export default function Footer() {
                     </a>
                 </div>
             </div>
+        
+        <h4 className={footerStyles.disclaimer}>
+            This site was designed and developed by Carlos Coral, all images are royalty free.
+        </h4>
+
+        <div className={footerStyles.wrapper}>
+            <img src={footerLogo} alt="" className={footerStyles.footer__logo}/>
+        </div>
 
     </footer>
   )

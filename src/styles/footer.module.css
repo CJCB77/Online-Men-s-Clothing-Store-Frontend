@@ -50,3 +50,14 @@ main{
   justify-content: center;
 }
 
+.disclaimer {
+  text-align: center;
+  font-weight: 300;
+  margin-top: 5rem;
+  margin-bottom: 2rem;
+}
+
+.footer__logo {
+  height: 4rem;
+}
+
