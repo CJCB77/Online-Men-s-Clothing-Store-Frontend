@@ -1,7 +1,116 @@
 nav {
- font-size: 2.4rem; 
+ font-size: 1.6rem; 
+ display: flex;
+ flex-direction: column;
+ padding: 2rem;
+ padding-top: 3rem;
+ margin-bottom: 2rem;
 }
 
-.upper-links{
-  
+.nav__upper{
+  display: flex;
+  justify-content: space-between;
+
+}
+
+.wrapper {
+  display: flex;
+  align-items: center;
+}
+
+.link {
+  margin-right: 2rem;
+  color: #545269;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.link:hover{
+  color: #545269;
+}
+
+.logo{
+  height: 7rem;
+}
+
+.search {
+  text-decoration: none;
+  border: none;
+  border-bottom: 1px solid #545269;
+  background-color: #FAF9F8;
+  background-image: url("../imgs/search.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  text-indent: 3.5rem;
+  background-size: 2rem;
+  padding-bottom: 0.4rem;
+  color: #545269;
+  font-weight: 400;
+  width: 30rem;
+}
+
+.search:focus {
+  background-image: none;
+  text-indent: 0;
+  outline: none;
+}
+
+.search:active{
+  border: none;
+}
+
+.search::placeholder{
+  color: #545269;
+  font-weight: 300;
+}
+
+
+.categories{
+  display: flex;
+  list-style: none;
+  justify-content: center;
+}
+
+.categories__link{
+  margin: 2rem 1rem;
+  color: #545269;
+  font-weight: 400;
+  font-size: 1.8rem;
+}
+
+.categories__link a {
+  text-decoration: none;
+}
+
+.categories__link a:hover {
+  text-decoration: underline;
+}
+
+.categories__link a, a:visited, a:hover, a:active {
+  color: inherit;
+}
+
+.icon{
+  height: 2.4rem;
+  margin-right: 0.8rem;
+}
+
+.badge__container {
+  position: relative;
+}
+
+.badge{
+  background-color: #6C9A8B;
+  color: #FAF9F8;
+  font-size: 1.2rem;
+  position: absolute;
+  left: 1.2rem;
+  top: -1rem;
+  width: 1.8rem;
+  height: 1.8rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 1rem;
+
 }
