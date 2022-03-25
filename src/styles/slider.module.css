@@ -1,17 +1,72 @@
 .slider {
   display: flex;
   width: 80vw;
-  height:80vh;
+  height:85vh;
+  color: hsl(30, 17%, 98%);
+  margin: 3rem;
+
 }
 
 .cta {
   width: 50%;
   background-color: #545269;
+  padding: 3rem;
+  border-radius: 3px 0 0 3px;
+}
+
+.cta h2 {
+  font-family: "Roboto Slab", sans-serif;
+  font-weight: 500;
+  font-size: 3.6rem;
+  letter-spacing: 2px;
+  margin-top: 2rem;
+}
+
+.cta h3 {
+  font-size: 2.4rem;
+  font-weight: 200;
+  
+}
+
+.cta h1 {
+  font-size: 6.4rem;
+  font-weight: 500;
+  font-family: "Roboto Slab", sans-serif;
+  margin-bottom: 8rem;
+
+}
+.cta h1 span {
+  color: #D09C74;
 }
 
 .carousel {
   width: 50%;
-  background-image: url("../imgs/model1.png");
-  background-position: 1rem;
+  border-radius: 0 3px 3px 0;
+}
+
+/* Button */
+.carousel__btn {
+  font-size: 2.4rem;
+  color: #D09C74;
+  border: 1px solid #D09C74;
+  text-decoration: none;
+  padding: 2rem 5rem;
+  border-radius: 3px;
+  display: inline-flex;
+  transition: all 0.1s ease-in;
+}
+
+.carousel__btn:hover {
+  transform: translateY(-0.3rem);
+}
+
+.arrow {
+ height: 3rem;
+ margin-left: 1rem;
+}
+
+.carousel__btn:hover {
+  background-color: #D09C74;
+  color: #FAF9F8;
 }
 
