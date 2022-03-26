@@ -1,0 +1,20 @@
+.gallery {
+  color: #545269;
+  margin: 8rem 0;
+}
+
+.gallery h2 {
+  font-size: 3.6rem;
+  font-weight: 400;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(4, auto);
+  gap: 1rem;
+  margin: 3rem 0;
+}
+
+.product {
+  height: 29rem;
+}

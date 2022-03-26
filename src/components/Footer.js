@@ -10,7 +10,7 @@ import footerLogo from "../imgs/footerLogo.svg"
 export default function Footer() {
   return (
     <footer>
-        <main>
+        <main className={footerStyles.footer__links}>
             <div className={footerStyles.col}>
                 <h3 className={footerStyles.col__title}>Customer Service</h3>
                 <ul className={footerStyles.col__items}>
