@@ -3,6 +3,7 @@ import Navbar from '../components/Navbar'
 import Footer from '../components/Footer'
 import Slider from '../components/Slider'
 import Gallery from '../components/Gallery'
+import Featured from '../components/Featured'
 
 export default function Home() {
 
@@ -13,6 +14,7 @@ export default function Home() {
         <main className='homepage'>
           <Slider />
           <Gallery />
+          <Featured />
           
         </main>
         <Footer />

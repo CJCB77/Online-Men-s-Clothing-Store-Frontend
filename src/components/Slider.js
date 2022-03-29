@@ -50,9 +50,9 @@ export default function Slider() {
   },[])
 
 
-  const slides = images.map((img) => {
+  const slides = images.map((img, index) => {
     return (
-        <div style={{backgroundImage:`url(${img})`}} className={sliderStyles.slide}></div>
+        <div key={index} style={{backgroundImage:`url(${img})`}} className={sliderStyles.slide}></div>
 
     )})
   

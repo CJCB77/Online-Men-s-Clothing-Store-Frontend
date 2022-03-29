@@ -1,0 +1,78 @@
+.featured__section {
+  background-color: #F3EFEA;
+  padding: 4rem 8rem;
+  margin: 0 -8rem;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;  
+}
+.featured {
+  height: 90vh;
+  width: 100vw;
+  background-color: #fff;
+  display: flex;
+  position: relative;
+  margin: 4rem 0;
+}
+
+.featured__left {
+  background-image: url("../imgs/featuredPants2.png");
+  background-size: cover;
+  height: 100%;
+  width: 50%;
+  position: relative;
+}
+
+.featured__right {
+  background-image: url("../imgs/featuredPants.png");
+  background-size: cover;
+  height: 100%;
+  width: 50%;
+}
+
+.featured__price {
+  background-color: hsla(245, 12%, 37%, 0.788);
+  width: 32rem;
+  height: 16rem;
+  color: #FAF9F8;
+  font-size: 3.6rem;
+  padding: 1.5rem;
+  position: absolute;
+  top: 25%;
+  left: 3rem;
+}
+
+.featured__price span {
+  display: block;
+  
+}
+
+.featured__price :first-child {
+  font-weight: 200;
+}
+
+.featured__price :nth-child(2) {
+  font-weight: 400;
+  font-size: 2.4rem;
+}
+
+.featured__price :last-child {
+  margin-top: 0.8rem;
+  font-size: 4rem;
+  font-weight: 400;
+}
+
+.featured a {
+  font-size: 2.4rem;
+  font-weight: 400;
+  text-decoration: none;
+  border: none;
+  background-color: #545269;
+  color: #FAF9F8;
+  position: absolute;
+  top: 75%;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 1px;
+  padding: 1.5rem 4rem;
+}

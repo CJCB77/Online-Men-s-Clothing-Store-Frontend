@@ -28,6 +28,12 @@ nav {
   color: #545269;
 }
 
+.logo__container {
+  display: flex;
+  justify-content: center;
+  margin-top: -2rem;
+}
+
 .logo{
   height: 7rem;
 }
@@ -113,4 +119,144 @@ nav {
   align-items: center;
   border-radius: 1rem;
 
+}
+.menuIcon {
+  display: none;
+}
+
+.mobile__title {
+  display: none;
+}
+
+.mobile__arrow {
+  display: none;
+}
+
+/* Phone Navbar */
+
+@media (max-width:1000px) {
+  nav {
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    padding: 2rem 1rem;
+    flex-wrap: wrap;
+    position: relative;
+  }
+
+  .nav__upper{
+    align-items: center;
+    flex-direction: row-reverse;
+
+  }
+
+  .search{
+    display: none;
+  }
+
+  .link{
+    display: none;
+  }
+  
+  .logo__container {
+    margin: 0;
+  }
+  .logo{
+    height: 4rem;
+    margin-bottom: 1rem;
+  }
+
+  .icon{
+    height: 2.8rem;
+    margin-left: 0.5rem;
+  }
+
+  .mobile__title {
+    display: block;
+    font-weight: 700;
+  }
+
+  .mobile__arrow {
+    height: 2rem;
+    display: block;
+  }
+
+  .categories {
+    flex-basis: 100%;
+    flex-direction: column;
+    justify-content: flex-start;
+    height: 100vh;
+    width: 85vw;
+    position: absolute;
+    z-index: 100;
+    top:8rem;
+    left: -100%;
+    background-color: #FAF9F8;
+    transition: all 0.4s ease-in;
+    padding: 1rem;
+    
+  }
+
+  
+  .categories__link {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    margin: 0;
+    padding: 2rem;
+    font-size: 2.4rem; 
+  
+  }
+
+  .categories__link:hover {
+    background-color: #545269;
+  }
+
+  .categories__link:hover a{
+    color: #FAF9F8;
+  }
+
+  .categories__overlay {
+    background-color: hsla(245, 12%, 37%, 0.781);
+    position: absolute;
+    height: 90vh;
+    width: 100vw;
+    z-index: 99;
+    top: 8rem;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+  }
+
+  .categories__overlay button {
+    width: 6rem;
+    height: 6rem;
+    border-radius: 10rem;
+    border: none;
+    font-size: 3.6rem;
+    font-weight: 300;
+    color: #FAF9F8;
+    background-color: transparent;
+    margin-right: 1rem;
+ 
+
+  }
+
+  .categories__close {
+    height: 3rem;
+  }
+
+  .menuIcon{
+    display: block;
+    width: 4rem;
+    background-color: #FAF9F8;
+    border: none;
+    margin-right: 0.5rem;
+    margin-top: 0.5rem;
+  }
+
+  .menuIcon img {
+    height: 3rem;
+  }
+  
 }

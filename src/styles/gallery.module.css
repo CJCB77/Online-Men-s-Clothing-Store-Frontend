@@ -11,10 +11,51 @@
 .grid {
   display: grid;
   grid-template-columns: repeat(4, auto);
-  gap: 1rem;
+  gap: 2rem 0;
   margin: 3rem 0;
 }
 
+
 .product {
-  height: 29rem;
+  height: 30rem;
 }
+
+
+@media (max-width:1300px) {
+  .product{
+    height: 24rem;
+  }
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(4, auto);
+    gap: 1rem;
+    margin: 3rem 0;
+    justify-content: space-between;
+  }
+  
+}
+@media (max-width:1000px) {
+  .product{
+    height: 22rem;
+  }
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    justify-content: center;
+  }
+  
+}
+@media (max-width:700px) {
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(1, auto);
+    justify-content: center;
+  }
+
+  .product{
+    height: 30rem;
+  }
+  
+}
+
+

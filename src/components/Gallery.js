@@ -1,23 +1,22 @@
 import React from 'react'
 import galleryStyles from "../styles/gallery.module.css"
-import shoes1 from "../imgs/test/shoes.png"
-import shirt1 from "../imgs/test/shirt.png"
-import jacket from "../imgs/test/jacket.png"
+import {products} from "../products"
+
 
 export default function Gallery() {
+  
+
+  const myProducts = products.map((prod) => {
+    return <img src={prod.img} className={galleryStyles.product} />
+  })
+
   return (
     <section className={galleryStyles.gallery}>
       <h2>Latest Items</h2>
       <div className={galleryStyles.grid}>
-        <img src={shoes1} alt="" className={galleryStyles.product} />
-        <img src={shirt1} alt="" className={galleryStyles.product} />
-        <img src={jacket} alt="" className={galleryStyles.product} />
-        <img src={shirt1} alt="" className={galleryStyles.product} />
-        <img src={shoes1} alt="" className={galleryStyles.product} />
-        <img src={shirt1} alt="" className={galleryStyles.product} />
-        <img src={shirt1} alt="" className={galleryStyles.product} />
-        <img src={shirt1} alt="" className={galleryStyles.product} />
+        {myProducts}
       </div>
     </section>
+
   )
 }
