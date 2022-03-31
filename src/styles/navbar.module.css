@@ -9,6 +9,7 @@ nav {
 .nav__upper{
   display: flex;
   justify-content: space-between;
+  z-index: 10;
 
 }
 
@@ -22,6 +23,9 @@ nav {
   color: #545269;
   text-decoration: none;
   font-weight: 500;
+  display: flex;
+  align-items: center;
+
 }
 
 .link:hover{
@@ -154,6 +158,10 @@ nav {
   }
 
   .link{
+    display: block;
+  }
+
+  .link__name {
     display: none;
   }
   
@@ -168,6 +176,7 @@ nav {
   .icon{
     height: 2.8rem;
     margin-left: 0.5rem;
+    margin-right: 0;
   }
 
   .mobile__title {
@@ -223,6 +232,7 @@ nav {
     width: 100vw;
     z-index: 99;
     top: 8rem;
+    left: 0;
     display: flex;
     justify-content: flex-end;
     align-items: center;
@@ -237,7 +247,6 @@ nav {
     font-weight: 300;
     color: #FAF9F8;
     background-color: transparent;
-    margin-right: 1rem;
  
 
   }
