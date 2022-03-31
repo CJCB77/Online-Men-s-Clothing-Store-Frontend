@@ -4,6 +4,7 @@ import Footer from '../components/Footer'
 import Slider from '../components/Slider'
 import Gallery from '../components/Gallery'
 import Featured from '../components/Featured'
+import Newsletter from '../components/Newsletter'
 
 export default function Home() {
 
@@ -14,10 +15,12 @@ export default function Home() {
         <main className='homepage'>
           <Slider />
           <Gallery />
-          <Featured />
-          
+          <Featured /> 
+          <Newsletter />
         </main>
         <Footer />
+     
+
 
     </React.Fragment>
   )

@@ -19,6 +19,17 @@ html {
 .homepage {
  padding: 0 8rem;
  position: relative;
+ display: flex;
+ flex-direction: column;
+ justify-content: center;
+}
+
+/* Mobile */
+
+@media (max-width:1000px) {
+  .homepage {
+    padding: 0 4rem;
+  }
 }
 
 
