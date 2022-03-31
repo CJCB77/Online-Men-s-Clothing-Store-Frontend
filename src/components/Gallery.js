@@ -6,8 +6,8 @@ import {products} from "../products"
 export default function Gallery() {
   
 
-  const myProducts = products.map((prod) => {
-    return <img src={prod.img} className={galleryStyles.product} />
+  const myProducts = products.map((prod,index) => {
+    return <img key={index} src={prod.img} className={galleryStyles.product} />
   })
 
   return (
