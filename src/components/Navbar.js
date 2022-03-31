@@ -12,11 +12,11 @@ import SignIn from './SignIn'
 function Navbar(props) {
   
   const [showMobileMenu, setMobileMenu] = useState(false)
+  const [showSignIn, setShowSignIn] = useState(false)
   
   const mobileStyle = {
       left: showMobileMenu ? 0 : "-100%"
   }
-
 
   useEffect(()=> {
     const body = document.querySelector("body")
@@ -27,24 +27,24 @@ function Navbar(props) {
     return () => {
         body.style.overflow = ""
     }
-
   },[showMobileMenu])
 
-  function showSignIn(e) {
+  
+  function handleSignIn(e) {
     e.preventDefault()
-    console.log("Click")
+    setShowSignIn(!showSignIn)
   }
+
 
   return (  
     <React.Fragment>
-        <SignIn />
-
+        {showSignIn && <SignIn open={setShowSignIn}/>}
         <nav className='navbar'>
             <div className={navStyles.nav__upper}>
                 <input type="text" name="search" id="search" placeholder='Search clothing...' 
                     className={navStyles.search}/>
                 <div className={navStyles.wrapper}>
-                    <a href="#" className={navStyles.link} onClick={showSignIn}>
+                    <a href="#" className={navStyles.link} onClick={handleSignIn}>
                         <img src={Profile} alt="" className={navStyles.icon}/>
                         <span className={navStyles.link__name}>Sign in</span>
                     </a>
