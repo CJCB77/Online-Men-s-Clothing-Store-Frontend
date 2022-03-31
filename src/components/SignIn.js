@@ -2,6 +2,8 @@ import React, { useState } from 'react'
 import signInStyles from "../styles/signin.module.css"
 import cross from "../imgs/crossBlue.svg"
 
+import "animate.css"
+
 export default function SignIn(props) {
 
   const [credentials, setCredentials] = useState({email:"", password:""})
@@ -21,11 +23,12 @@ export default function SignIn(props) {
 
   function handleClose() {
     props.open((prevState) => !prevState)
+    props.close((prev) => !prev)
   }
 
   return (
     <section className={signInStyles.signIn}>
-      <article className={signInStyles.container}>
+      <article className={`${signInStyles.container} animate__animated animate__fadeInUp`} >
         <img src={cross} alt="" className={signInStyles.close} onClick={handleClose}/>
         <h1>Sign In</h1>
         <h3>Sign into your account for discounts, rewards and orders.</h3>

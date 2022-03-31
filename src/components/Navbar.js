@@ -8,9 +8,12 @@ import RightArrow from "../imgs/right-arrow2.svg"
 import Cross from "../imgs/cross.svg"
 
 import SignIn from './SignIn'
+import useBodyScrollLock from '../hooks/useBodyScrollLock'
 
 function Navbar(props) {
   
+  const [lockScroll,setLockScroll] = useBodyScrollLock()
+
   const [showMobileMenu, setMobileMenu] = useState(false)
   const [showSignIn, setShowSignIn] = useState(false)
   
@@ -18,27 +21,32 @@ function Navbar(props) {
       left: showMobileMenu ? 0 : "-100%"
   }
 
-  useEffect(()=> {
-    const body = document.querySelector("body")
-    if(showMobileMenu){
-        body.style.overflow = "hidden"
-    }
+//   useEffect(()=> {
+//     const body = document.querySelector("body")
+//     if(showMobileMenu){
+//         body.style.overflow = "hidden"
+//     }
 
-    return () => {
-        body.style.overflow = ""
-    }
-  },[showMobileMenu])
+//     return () => {
+//         body.style.overflow = ""
+//     }
+//   },[showMobileMenu])
 
-  
+  function handleMobileMenu() {
+      setMobileMenu(!showMobileMenu)
+      setLockScroll(!lockScroll)
+  }
+
   function handleSignIn(e) {
     e.preventDefault()
     setShowSignIn(!showSignIn)
+    setLockScroll(!lockScroll)
   }
 
 
   return (  
     <React.Fragment>
-        {showSignIn && <SignIn open={setShowSignIn}/>}
+        {showSignIn && <SignIn open={setShowSignIn} close={setLockScroll}/>}
         <nav className='navbar'>
             <div className={navStyles.nav__upper}>
                 <input type="text" name="search" id="search" placeholder='Search clothing...' 
@@ -61,7 +69,7 @@ function Navbar(props) {
                 </div>
             </div>
             <div className={navStyles.logo__container}>
-                <button className={navStyles.menuIcon} onClick={() => setMobileMenu(!showMobileMenu)}>
+                <button className={navStyles.menuIcon} onClick={handleMobileMenu}>
                     <img src={Menu} alt=""/>
                 </button>
                 <img src={Logo} alt="" className={navStyles.logo}/>
