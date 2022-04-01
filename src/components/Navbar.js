@@ -1,5 +1,8 @@
 import React, { useEffect, useState } from 'react'
+//Styles
 import navStyles from "../styles/navbar.module.css"
+
+//Images
 import Logo from "../imgs/logo.svg"
 import Profile from "../imgs/account.svg"
 import Bag from "../imgs/bag.svg"
@@ -7,7 +10,11 @@ import Menu from "../imgs/menu.svg"
 import RightArrow from "../imgs/right-arrow2.svg"
 import Cross from "../imgs/cross.svg"
 
+//Components
 import SignIn from './SignIn'
+import SignUp from './SignUp'
+
+//Custom Hooks
 import useBodyScrollLock from '../hooks/useBodyScrollLock'
 
 function Navbar(props) {
@@ -16,21 +23,11 @@ function Navbar(props) {
 
   const [showMobileMenu, setMobileMenu] = useState(false)
   const [showSignIn, setShowSignIn] = useState(false)
+  const [showSignUp, setShowSignUp] = useState(true)
   
   const mobileStyle = {
       left: showMobileMenu ? 0 : "-100%"
   }
-
-//   useEffect(()=> {
-//     const body = document.querySelector("body")
-//     if(showMobileMenu){
-//         body.style.overflow = "hidden"
-//     }
-
-//     return () => {
-//         body.style.overflow = ""
-//     }
-//   },[showMobileMenu])
 
   function handleMobileMenu() {
       setMobileMenu(!showMobileMenu)
@@ -43,10 +40,15 @@ function Navbar(props) {
     setLockScroll(!lockScroll)
   }
 
+  function handleSignUp() {
+
+  }
+
 
   return (  
     <React.Fragment>
         {showSignIn && <SignIn open={setShowSignIn} close={setLockScroll}/>}
+        {showSignUp && <SignUp />}
         <nav className='navbar'>
             <div className={navStyles.nav__upper}>
                 <input type="text" name="search" id="search" placeholder='Search clothing...' 
