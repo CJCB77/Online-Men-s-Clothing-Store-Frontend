@@ -14,6 +14,10 @@ html {
   font-family: "Roboto", sans-serif;
 }
 
+
+body {
+  height: 100%;
+}
 .homepage {
  padding: 0 8rem;
  position: relative;

@@ -23,7 +23,7 @@ function Navbar(props) {
 
   const [showMobileMenu, setMobileMenu] = useState(false)
   const [showSignIn, setShowSignIn] = useState(false)
-  const [showSignUp, setShowSignUp] = useState(true)
+  const [showSignUp, setShowSignUp] = useState(false)
   
   const mobileStyle = {
       left: showMobileMenu ? 0 : "-100%"
@@ -41,14 +41,15 @@ function Navbar(props) {
   }
 
   function handleSignUp() {
+    setShowSignUp(!showSignUp)
 
   }
 
 
   return (  
     <React.Fragment>
-        {showSignIn && <SignIn open={setShowSignIn} close={setLockScroll}/>}
-        {showSignUp && <SignUp />}
+        {showSignIn && <SignIn open={setShowSignIn} close={setLockScroll} register={handleSignUp}/>}
+        {showSignUp && <SignUp open={setShowSignUp} close={setLockScroll} login={handleSignIn}/>}
         <nav className='navbar'>
             <div className={navStyles.nav__upper}>
                 <input type="text" name="search" id="search" placeholder='Search clothing...' 

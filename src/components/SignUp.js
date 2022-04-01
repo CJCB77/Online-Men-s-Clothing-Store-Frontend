@@ -37,7 +37,7 @@ export default function SignUp(props) {
     console.log(userData)
   }
 
-  function handleSignIn(event) {
+  function handleSignUp(event) {
     event.preventDefault()
     console.log(userData)
 
@@ -48,6 +48,13 @@ export default function SignUp(props) {
     props.close((prev) => !prev)
   }
 
+  function handleSignIn(e) {
+    //Close signup
+    props.login(e)
+    props.open((prevState) => !prevState)
+    //Unlock scroll
+    props.close((prev) => !prev)
+  }
 
   return (
     <section className={signUpStyles.signUp}>
@@ -94,16 +101,15 @@ export default function SignUp(props) {
                     onChange={handleChange}
           />
           <FormField name="receivePromos" 
-                    label="Yes email me special offers,discounts,new products notifications, special rewards and more."
+                    label="Yes email me special offers,discounts, products notifications, special rewards and more."
                     type="checkbox"
                     value={userData.receivePromos}
                     onChange={handleChange}
           />
         </div>
 
-        <a href="#" className={signUpStyles.recover}>Forgot password?</a>
-        <a href="#" className={signUpStyles.signUp__btn} onClick={handleSignIn}>Sign Up</a>
-        <a href="#" className={signUpStyles.register__btn}>Back to sign in</a>
+        <a href="#" className={signUpStyles.signUp__btn} onClick={handleSignUp}>Sign Up</a>
+        <a href="#" className={signUpStyles.register__btn} onClick={handleSignIn}>Back to sign in</a>
       </article>
     </section>
   )

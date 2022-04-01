@@ -37,6 +37,17 @@ export default function SignIn(props) {
     props.close((prev) => !prev)
   }
 
+  function handleSignUp(e) {
+    e.preventDefault()
+    props.register()
+    //Close sign in
+    props.open((prevState) => !prevState)
+    //Lock scroll
+ 
+    
+  }
+
+
   return (
     <section className={signInStyles.signIn}>
       <article className={`${signInStyles.container} animate__animated animate__fadeInUp`} >
@@ -60,7 +71,7 @@ export default function SignIn(props) {
 
         <a href="#" className={signInStyles.recover}>Forgot password?</a>
         <a href="#" className={signInStyles.signIn__btn} onClick={handleSignIn}>Sign in</a>
-        <a href="#" className={signInStyles.register__btn}>Become a member</a>
+        <a href="#" className={signInStyles.register__btn} onClick={handleSignUp}>Become a member</a>
       </article>
     </section>
   )
