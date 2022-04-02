@@ -133,3 +133,11 @@
   right: 2rem;
   cursor: pointer;
 }
+
+/* Mobile */
+
+@media (max-width:550px) {
+  .container {
+    padding: 3rem;
+  }
+}

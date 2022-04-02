@@ -7,7 +7,12 @@ export default function Gallery() {
   
 
   const myProducts = products.map((prod,index) => {
-    return <img key={index} src={prod.img} className={galleryStyles.product} />
+    return (
+      <a href="#" className={galleryStyles.product__link}>
+        <img key={index} src={prod.img} className={galleryStyles.product} />
+        <div className={galleryStyles.overlay}></div>
+      </a>
+    )
   })
 
   return (

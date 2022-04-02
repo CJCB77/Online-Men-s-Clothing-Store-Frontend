@@ -1,12 +1,14 @@
-import Home from "./pages/Home"
 import "./styles/style.css"
+
+import Home from "./pages/Home"
+import ProductsByCategory from "./pages/ProductsByCategory";
 
 function App() {
   
 
   return (
 
-        <Home />
+        <ProductsByCategory itemCount={1} />
 
   );
 }
