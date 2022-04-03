@@ -32,7 +32,6 @@ body {
 }
 .product__list {
   padding: 2rem;
-  height: 100vh;
   display: flex;
 }
 
