@@ -20,7 +20,8 @@ function Categories(props) {
     <button className={sidebarStyles.clear}>Clear</button>
     
     <form action="" className={sidebarStyles.categories__form}>
-      <div className={sidebarStyles.form__control}>
+      {props.categories}
+      {/* <div className={sidebarStyles.form__control}>
         <input type="checkbox" name='chinos' id='chinos' value="chinos" />
         <label htmlFor="chinos">Chinos</label>
       </div>
@@ -43,7 +44,7 @@ function Categories(props) {
       <div className={sidebarStyles.form__control}>
         <input type="checkbox" name='sweapants' id='sweapants' value="sweapants" />
         <label htmlFor="sweapants">Sweatpants</label>
-      </div>
+      </div> */}
     </form>
     <hr className={sidebarStyles.divider} />
   </section>
@@ -53,7 +54,7 @@ function Categories(props) {
 function Sizes(props) {
   return(
     <section className={sidebarStyles.size}>
-    
+
       <h2 className={sidebarStyles.section__name}>Size</h2>
       <button className={sidebarStyles.clear}>Clear</button>
 
@@ -71,6 +72,15 @@ function Sizes(props) {
 
 export default function ProductSidebar() {
 
+  const [categoryFilter, setCategoryFilter] = useState({
+    chinos:false,
+    dress:false,
+    joggers:false,
+    jeans:false,
+    cargos:false,
+    sweatpants:false
+  })
+
   const [sizeFilter, setSizeFilter] = useState({
     xs:false,
     s:false,
@@ -80,7 +90,7 @@ export default function ProductSidebar() {
     xxl:false,
   })
 
-  function handleCheckbox(event) {
+  function handleFilterSize(event) {
     const {checked, name} = event.target
     setSizeFilter( (prevFilters) => ({
       ...prevFilters,
@@ -88,6 +98,14 @@ export default function ProductSidebar() {
     }))
 
   }
+
+  function handleCategoryFilter(event) {
+    const {checked, name} = event.target
+    setCategoryFilter((prevFilters) => ({
+      ...prevFilters,
+      [name] :checked
+    }))
+  } 
 
   const checkedStyle = {
     border:"3px solid #545269",
@@ -97,13 +115,25 @@ export default function ProductSidebar() {
     border:"1px solid #545269"
   }
 
+  const categoryFilters = Object.keys(categoryFilter).map((category,index) => {
+    return(
+      <div key={index} className={sidebarStyles.form__control}>
+        <input type="checkbox" name={category} id={category} value={category} 
+          onClick={handleCategoryFilter} />
+        <label htmlFor={category}>{category}</label>
+      </div>
+    )
+  })
 
   const sizeFilters = Object.keys(sizeFilter).map((size,index) => {
     return(
       <div key={index} className={sidebarStyles.form__box} 
-      style={sizeFilter[size] ? checkedStyle : uncheckedStyle}>
-        <input type="checkbox" name={size} id={size} value={size} onClick={handleCheckbox} />
+          style={sizeFilter[size] ? checkedStyle : uncheckedStyle}>
+
+        <input type="checkbox" name={size} id={size} value={size} 
+          onClick={handleFilterSize} />
         <label htmlFor={size}>{size}</label>
+
       </div>
     )
   })
@@ -111,7 +141,7 @@ export default function ProductSidebar() {
   return (
     <aside className={sidebarStyles.sidebar}>
       <Header />
-      <Categories />
+      <Categories categories={categoryFilters} />
       <Sizes sizes={sizeFilters} />
 
     </aside>
