@@ -1,5 +1,102 @@
 .list {
   font-size: 2.4rem;
   color: #545269;
-  width: 80%;
+  display: flex;
+  flex-direction: column;
+  margin-left: 3rem;
+  margin-top: 2rem;
+}
+
+.list h1 {
+  font-size: 3.6rem;
+  font-weight: 400;
+}
+
+.item__count {
+  font-size: 2.8rem;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  margin: 4rem 0;
+}
+
+.item {
+  margin: 2rem 0;
+}
+
+.item__title {
+  font-size: 1.8rem;
+  font-weight: 300;
+  margin: 0.5rem 0;
+  text-decoration: none;
+  color: #545269;
+}
+
+.item img {
+  height: 34rem;
+}
+
+
+.item__price {
+  font-size: 1.8rem;
+  font-weight: 500;
+  margin: 1rem 0;
+  color: #545269;
+}
+
+.item__discount {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #545269;
+
+}
+
+
+.discount__tag {
+  color: #D64E4E;
+  margin-left: 0.5rem;
+}
+
+.combo {
+  width: 20rem;
+  padding: 0.5rem;
+  font-size: 1.8rem;
+  color: #545269;
+  border-radius: 5px;
+  border: 1px solid #545269;
+  background-color: #F0EDED;
+}
+
+.combo:focus {
+  outline: #545269;
+}
+
+.currentPageSelector {
+  display: flex;
+  align-items: center;
+  align-self: flex-end;
+}
+
+.currentPageSelector img {
+  height: 2.5rem;
+  margin: 0 0.4rem;
+  cursor: pointer;
+
+}
+/* Mobile */
+
+@media (max-width:1000px) {
+  .grid {
+    grid-template-columns: repeat(2, auto);
+  }
+
+  .item {
+    width: 25rem;
+  }
+  
+  .item img {
+    height: 20rem;
+  }
 }

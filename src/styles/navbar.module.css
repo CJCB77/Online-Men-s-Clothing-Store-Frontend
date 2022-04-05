@@ -4,6 +4,8 @@ nav {
  flex-direction: column;
  padding: 1rem;
  padding-top: 3rem;
+ padding-bottom: 0;
+ 
 }
 
 .nav__upper{

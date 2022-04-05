@@ -11,8 +11,7 @@ export default function ProductsByCategory() {
       <hr className="section__start" />
       <section className="product__list">
         <ProductSidebar />
-        <ProductList />
-        
+        <ProductList /> 
       </section>
       <Footer />
     </React.Fragment>

@@ -32,7 +32,9 @@ body {
 }
 .product__list {
   padding: 2rem;
-  display: flex;
+  display: grid;
+  grid-template-columns: 20% 80%;
+  width: auto;
 }
 
 /* Mobile */

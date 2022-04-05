@@ -1,16 +1,12 @@
 .sidebar {
   font-size: 2.4rem;
   color: #545269;
-  width: 20%;
-  height: 90vh;
+  height: 100%;
   padding-right: 1rem;
   transition: all 0.5s ease-in;
-  overflow-y: hidden;
 }
 
-.sidebar:hover {
-  overflow-y: scroll;
-}
+
 
 .divider {
   margin-top: 1.5rem;
