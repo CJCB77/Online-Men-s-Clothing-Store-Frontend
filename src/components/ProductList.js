@@ -48,11 +48,6 @@ function NextPage() {
 }
 export default function ProductList() {
 
-  useEffect(() => {
-    fetch("../products.js")
-      .then(data => console.log(data))
-  },[])
-
   return (
     <section className={productListStyles.list}>
       <h1>Shirts <span className={productListStyles.item__count}>(10)</span></h1>

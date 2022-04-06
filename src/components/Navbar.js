@@ -109,7 +109,7 @@ function Navbar(props) {
                 </li>
             </ul>
             {showMobileMenu &&  <div className={navStyles.categories__overlay}>
-                    <button onClick={() => setMobileMenu(!showMobileMenu)}>
+                    <button onClick={handleMobileMenu}>
                         <img src={Cross} alt="" className={navStyles.categories__close}/>
                     </button>
             </div>}

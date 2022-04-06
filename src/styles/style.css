@@ -45,6 +45,13 @@ body {
   }
 }
 
+@media (max-width:550px) {
+  .product__list {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
 
 
 
