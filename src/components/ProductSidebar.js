@@ -6,6 +6,7 @@ import optionsIcon from "../imgs/icons/options.svg"
 
 //Hooks
 import useWindowDimension from '../hooks/useWindowDimension'
+import useBodyScrollLock from "../hooks/useBodyScrollLock"
 
 function Header(props) {
   return(
@@ -73,8 +74,11 @@ export default function ProductSidebar() {
     xxl:false,
   })
 
-  const [mobileDisplay, setMobileDisplay] = useState(true)
+  const [mobileDisplay, setMobileDisplay] = useState(false)
   const windowWidth = useWindowDimension()
+
+  const [showMobileFilters, setMobileFilters] = useState(false)
+  const [lockScroll, setLockScroll] = useBodyScrollLock()
 
   useEffect(() => {
     console.log(windowWidth)
@@ -82,6 +86,7 @@ export default function ProductSidebar() {
       setMobileDisplay(true)
     }else{
       setMobileDisplay(false)
+      setMobileFilters(true)
     }
   },[windowWidth])
 
@@ -103,7 +108,8 @@ export default function ProductSidebar() {
   } 
 
   function handleFilterTab() {
-    console.log("Filter tab")
+    setMobileFilters(!showMobileFilters)
+    setLockScroll(!lockScroll)
   }
 
   const checkedStyle = {
@@ -112,6 +118,14 @@ export default function ProductSidebar() {
 
   const uncheckedStyle = {
     border:"1px solid #545269"
+  }
+
+  const showMobileFiltersStyle = {
+    transform: "translateX(0)",
+  }
+
+  const hideMobileFiltersStyle = {
+    transform: "translateX(-110%)",
   }
 
   const categoryFilters = Object.keys(categoryFilter).map((category,index) => {
@@ -140,8 +154,11 @@ export default function ProductSidebar() {
   return (
     <aside className={sidebarStyles.sidebar}>
       <Header mobileDisplay={mobileDisplay} handleClick={handleFilterTab}/>
-      <Categories categories={categoryFilters} />
-      <Sizes sizes={sizeFilters} />
+      <div className={sidebarStyles.sidebar__body} 
+          style={showMobileFilters ? showMobileFiltersStyle : hideMobileFiltersStyle}>
+        <Categories categories={categoryFilters} />
+        <Sizes sizes={sizeFilters} />
+      </div>
 
     </aside>
   )

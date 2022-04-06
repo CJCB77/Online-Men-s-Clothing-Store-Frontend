@@ -140,6 +140,12 @@
 }
 
 @media (max-width:550px) {
+
+  .sidebar {
+    padding-right: 0;
+    position: relative;
+  }
+
   .header {
     flex-direction: row;
     justify-content: flex-end;
@@ -157,6 +163,28 @@
 
   .header button {
     display: none;
+  } 
+
+  .sidebar__body {
+    transition: all 0.3s ease-in;
+    background-color: #FAF9F8;
+    position: absolute;
+    padding-right: 2rem;
+    padding-bottom: 2rem;
+    top: 6rem;
+    left: 0;
+  }
+
+
+  .size__form {
+    margin: 1rem;
+    justify-content: start;
+    margin-left: 0;
+  }
+
+  .form__box {
+    margin-right: 1rem;
+    
   }
 
 }
