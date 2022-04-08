@@ -1,0 +1,115 @@
+.product__details {
+  padding: 4rem;
+  display: flex;
+  padding-bottom: 5rem;
+}
+
+.info {
+  width: 50%;
+}
+
+.info img {
+  height:70rem;
+}
+
+.info h3 {
+  font-size: 2.4rem;
+  font-weight: 500;
+  color: #6C9A8B;
+  margin: 2rem 0;
+}
+
+.info p {
+  font-size: 1.8rem;
+  font-weight: 300;
+  margin-bottom: 1rem;
+}
+
+.product__id {
+  font-size: 1.8rem;
+  font-weight: 300;
+  color: #545269;
+  display: block;
+}
+
+.sidebar {
+  width: 50%;
+  height: 50%;
+  padding: 0 5rem;
+  background-color: #FAF9F8;
+  position: sticky;
+  top: 0;
+}
+
+.sidebar h1 {
+  font-size: 3.6rem;
+  font-weight: 400;
+  color: #545269;
+  margin-bottom: 1rem;
+  margin-top: 1rem;
+}
+
+.product__price {
+  font-size: 2.8rem;
+  font-weight: 500;
+  color: #545269;
+  display: block;
+  margin: 4rem 0;
+}
+
+.product__form {
+  font-size: 2.4rem;
+  color: #545269;
+  display: flex;
+  flex-direction: column;
+}
+
+.form__control {
+  display: flex;
+  flex-direction: column;
+  margin-top: 3rem;
+}
+
+.form__control label {
+  margin-bottom: 4rem;
+  font-weight: 700;
+}
+
+.form__control label span {
+  font-weight: 400;
+}
+.form__control label a {
+  color: #919194;
+  font-weight: 400;
+}
+
+.form__control select {
+  padding: 1rem;
+  background-color: #F0EDED;
+  border: none;
+  color: #545269;
+  border-radius: 5px;
+  margin-bottom: 3rem;
+  cursor: pointer;
+  padding: 2rem;
+}
+
+.form__control select:focus {
+  outline: 1px solid #545269;
+}
+
+.product__form button {
+  background-color: #545269;
+  color: #FAF9F8;
+  padding: 2rem 0;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  border-radius: 0.5rem;
+}
+
+.product__form button img {
+  margin-right: 1rem;
+}

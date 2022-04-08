@@ -16,6 +16,7 @@ export const products = [
         id:1,
         name:"Men's Relaxed Fit Cargo Pant",
         img:"test/pants.png",
+        imgXL:"test/imgBigger/pantsXL.png",
         price:44.00,
         size:"M",
         category:"pants",
