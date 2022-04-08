@@ -50,7 +50,7 @@ export default function Product() {
             <div className={productStyles.form__control}>
               <label>Size: <span>Please Select</span> | <a href="#">Size Chart</a></label>
               <select name="size" id="size" onChange={handleChange}>
-                <option disabled selected > -- Select a size --</option>
+                <option disabled defaultValue={""} > -- Select a size --</option>
                 <option value="xs">XS</option>
                 <option value="s">S</option>
                 <option value="m">M</option>
