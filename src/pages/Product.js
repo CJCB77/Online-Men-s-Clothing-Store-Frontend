@@ -1,8 +1,10 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 //Components
 import Navbar from '../components/Navbar'
 import Footer from '../components/Footer'
 import Suggestion from '../components/Suggestions'
+//Hooks
+import useWindowDimension from '../hooks/useWindowDimension'
 //Styles
 import productStyles from "../styles/product.module.css"
 //Images
@@ -13,6 +15,8 @@ import { products } from '../products'
 export default function Product() {
 
   const [prod,setProd] = useState(products[1])
+  const [mobileDisplay, setMobileDisplay] = useState(false)
+  const windowWidth = useWindowDimension()
 
   function handleClick(event) {
     event.preventDefault()
@@ -27,6 +31,14 @@ export default function Product() {
       [name]: value
     }))
   }
+
+  useEffect(() => {
+    if(windowWidth < 550){
+      setMobileDisplay(true)
+    }else {
+      setMobileDisplay(false)
+    }
+  },[windowWidth])
 
   return (
     <React.Fragment>
@@ -45,8 +57,17 @@ export default function Product() {
           <h1>{prod.name}</h1>
           <span className={productStyles.product__id}>Art. Id:000233</span>
           <span className={productStyles.product__price}>${prod.price.toFixed(2)}</span>
-          <form action="" id="form" name="form" className={productStyles.product__form}>
+          {mobileDisplay &&
+          <div>
+            <h3>Product Details</h3>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi molestias dignissimos quae, 
+              accusamus minus error cupiditate culpa sit dicta commodi quaerat sint blanditiis, 
+              fugit laboriosam natus asperiores similique rerum. Sed.
+            </p>
+          </div>}
 
+          <form action="" id="form" name="form" className={productStyles.product__form}>
             <div className={productStyles.form__control}>
               <label>Size: <span>Please Select</span> | <a href="#">Size Chart</a></label>
               <select name="size" id="size" onChange={handleChange}>
@@ -62,6 +83,7 @@ export default function Product() {
               <img src={bagIcon} alt="" />
               Add to bag
             </button>
+
           </form>
 
         </aside>
