@@ -43,6 +43,7 @@ export default function Product() {
   return (
     <React.Fragment>
       <Navbar itemCount={3}/>
+      <hr  style={{margin:"0 1rem"}} />
       <section className={productStyles.product__details}>
         <div className={productStyles.info}>
           <img src={prod.imgXL} alt="" />

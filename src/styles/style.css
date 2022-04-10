@@ -37,6 +37,25 @@ body {
   width: auto;
 }
 
+
+.bag hr {
+  margin: 0 2rem;
+}
+
+.bag h1 {
+  text-align: center;
+  color: #545269;
+  font-size: 3.6rem;
+  font-weight: 500;
+  margin: 5rem 0;
+  letter-spacing: 1px;
+}
+
+.bag__body {
+  display: flex;
+}
+
+
 /* Mobile */
 
 @media (max-width:1000px) {
