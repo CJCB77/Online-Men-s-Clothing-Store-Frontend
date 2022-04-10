@@ -21,16 +21,16 @@ function BagItem(props) {
         <img src={removeIcon} alt="" />
       </div>
       <div className={shoppingListStyles.details__content} >
-        <p className={shoppingListStyles.details__price}>$21.99</p>
+        <p className={shoppingListStyles.details__price}>${props.prod.price.toFixed(2)}</p>
         <p>Color: Grey</p>
         <form action="" className={shoppingListStyles.qty}>
           <label htmlFor="qty">Qty: </label>
           <select name="qty" id="qty">
-            {props.available_qty}
+            {props.availableQty}
           </select>
         </form>
         <p>Size: {props.prod.size}</p>
-        <p>Total: {props.prod.price.toFixed(2)}</p>
+        <p>Total: {props.prod.price.toFixed(2)} </p>
       </div>
     </div>
   </article>
@@ -39,15 +39,19 @@ function BagItem(props) {
 
 export default function ShoppingBagList() {
 
-  const available_qty = [...Array(MAX_QTY + 1).keys()].slice(1).map((value) => {
+  const availableQty = [...Array(MAX_QTY + 1).keys()].slice(1).map((value) => {
     return  <option key={value} value={value}>{value}</option>
   })
   
+  const myShoppingCart = products.slice(0,4).map((prod) => {
+    return(
+      <BagItem availableQty={availableQty} prod={prod} />
+    )
+  })
 
   return (
     <section className={shoppingListStyles.shoppingBag}>
-      <BagItem available_qty={available_qty} prod={products[0]}/>
-
+      {myShoppingCart}
     </section>
   )
 }

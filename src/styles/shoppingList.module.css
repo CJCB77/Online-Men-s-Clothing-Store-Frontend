@@ -2,19 +2,22 @@
 .shoppingBag {
   width: 60%;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  padding: 0 4rem;
 }
 
 .item {
   background-color: #fff;
-  width: 50vw;
+  width: 100%;
   padding: 1rem;
+  margin: 1rem 0;
   display: flex;
+  box-shadow: 2px 3px 3px 1px rgba(0, 0, 0, 0.075);
 }
 
 
 .item__img img {
-  height: 20rem;
+  height: 16rem;
 }
 
 .details {
@@ -44,8 +47,8 @@
 }
 
 .details__content > * {
-  width: 50%;
-  margin: 0.5rem 0;
+  width: 40%;
+  margin: 0.6rem 0;
 }
 
 .details__content select {
@@ -54,6 +57,8 @@
   width: 6rem;
   height: 3rem;
   color: #545269;
+  text-indent: 0.5rem;
+  border-radius: 3px;
 }
 
 .details select:focus {
@@ -62,13 +67,14 @@
 
 .details__price {
   width: 100%;
-  margin: 2rem 0;
+  margin: 1.5rem 0;
   font-size: 1.8rem;
   font-weight: 500;
 }
 
 
 .details h3 {
-  font-size: 1.8rem;
+  font-size: 2rem;
   font-weight: 500;
+  width: 80%;
 }
