@@ -130,3 +130,50 @@
     margin:3px 0;
   }
 }
+
+/* Mobile */
+
+@media(max-width:550px) {
+  .shoppingBag {
+    width: 100%;
+  }
+
+  .item {
+    flex-direction: row;
+  }
+
+  .item__img img {
+    height: 12rem;
+  }
+
+  .details {
+    margin: 0;
+    margin-left: 1rem;
+  }
+
+  .details__header h3 {
+    font-size: 1.6rem;
+  }
+
+  .details__header img {
+    height: 2rem;
+  }
+
+  .details__content {
+    font-size: 1.4rem;
+  }
+  
+  .details__content > * {
+    width: 50%;
+  }
+
+  .details__price {
+    margin: 0.5rem 0;
+    font-size: 1.6rem;
+    width: 100%;
+  }
+
+  .qty select {
+    width: 4rem;
+  }
+}

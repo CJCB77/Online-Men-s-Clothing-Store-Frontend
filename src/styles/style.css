@@ -61,8 +61,7 @@ body {
 }
 
 
-/* Mobile */
-
+/* Tablet */
 @media (max-width:1000px) {
   .homepage {
     padding: 0 4rem;
@@ -71,17 +70,29 @@ body {
   .bag {
     padding: 0 2rem;
   }
-
+  
   .bag hr {
     margin: 0;
   }
 }
 
+/* Mobile */
 @media (max-width:550px) {
   .product__list {
     display: flex;
     flex-direction: column;
   }
+
+  .bag h1 {
+    font-size: 3.2rem;
+    margin: 3rem 0;
+  }
+
+  .bag__body {
+    flex-direction: column;
+  }
+
+
 }
 
 

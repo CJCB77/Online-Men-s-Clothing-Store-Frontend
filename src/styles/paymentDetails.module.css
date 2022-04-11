@@ -158,3 +158,11 @@
     height: 3.5rem;
   }
 }
+
+/* Mobile */
+
+@media (max-width:550px) {
+  .checkout {
+    width: 100%;
+  }
+} 
