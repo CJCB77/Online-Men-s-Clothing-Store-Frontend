@@ -34,15 +34,16 @@
   .suggestions h3 {
     font-size: 2rem;
     margin-bottom: 1rem;
+    margin-top: 2rem;
 
   }
 
   .suggestions article h4 {
-    font-size: 1.6rem;
+    font-size: 1.4rem;
   }
 
   .suggestions article p {
-    font-size: 1.6rem;
+    font-size: 1.4rem;
   }
 
   .suggestions article img {

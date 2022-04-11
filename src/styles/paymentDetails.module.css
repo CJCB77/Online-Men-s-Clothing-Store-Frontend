@@ -165,4 +165,33 @@
   .checkout {
     width: 100%;
   }
+
+  .details__header h2 {
+    font-size: 2.4rem;
+  }
+
+  .details__body h5 {
+    font-size: 1.6rem;
+  }
+
+  .details__body p {
+    font-size: 1.6rem;
+  }
+
+  .details__total h5 {
+    font-size: 1.8rem;
+  }
+
+  .details__total p {
+    font-size: 1.8rem;
+  }
+
+  .details button {
+    font-size: 1.6rem;
+    padding: 1.5rem;
+  }
+
+  .payment__option h4 {
+    font-size: 1.8rem;
+  }
 } 
