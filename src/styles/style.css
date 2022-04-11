@@ -67,6 +67,14 @@ body {
   .homepage {
     padding: 0 4rem;
   }
+
+  .bag {
+    padding: 0 2rem;
+  }
+
+  .bag hr {
+    margin: 0;
+  }
 }
 
 @media (max-width:550px) {

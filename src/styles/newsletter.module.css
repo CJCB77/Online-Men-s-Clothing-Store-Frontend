@@ -70,8 +70,16 @@
   height: 3rem;
 }
 
-/* Mobile  */
+/* Tablet  */
+@media (max-width:1000px) {
+  .newsletter {
+    height: 100%;
+    padding: 8rem 0;
+  }
+}
 
+
+/* Mobile  */
 @media (max-width:550px){
 
 

@@ -5,7 +5,8 @@ import Navbar from '../components/Navbar'
 import Footer from '../components/Footer'
 import ShoppingBagList from '../components/ShoppingBagList'
 import PaymentDetails from '../components/PaymentDetails'
-
+import Suggestions from "../components/Suggestions"
+import Newsletter from '../components/Newsletter'
 
 export default function ShoppingBag() {
   return (
@@ -19,6 +20,8 @@ export default function ShoppingBag() {
           <PaymentDetails />
         </div>
       </section>
+      <Suggestions />
+      <Newsletter light={false}/>
       <Footer />
     </React.Fragment>
   )

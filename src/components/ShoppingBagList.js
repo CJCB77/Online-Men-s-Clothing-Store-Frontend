@@ -1,10 +1,12 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 //Styles
 import shoppingListStyles from "../styles/shoppingList.module.css"
 //Products for testing
 import { products } from '../products'
 //Images
 import removeIcon from "../imgs/icons/remove.svg"
+//Hooks
+import useWindowDimension from '../hooks/useWindowDimension'
 
 // Max item number
 const MAX_QTY = 10
@@ -13,16 +15,30 @@ function handleRemove() {
   console.log("Removed Item")
 }
 
+
 function BagItem(props) {
+  const [tabletDisplay, setTabletDisplay] = useState(false)
+  const windowWidth = useWindowDimension()
+  
+  useEffect(() => {
+    if(windowWidth < 1000 && windowWidth > 550) {
+      setTabletDisplay(true)
+    }else{
+      setTabletDisplay(false)
+    }
+  },[windowWidth])
+
   return(
   <article className={shoppingListStyles.item}>
     <div className={shoppingListStyles.item__img}>
       <img src={props.prod.img} alt="" />
+      {tabletDisplay && <img src={removeIcon} alt="" onClick={handleRemove} 
+          className={shoppingListStyles.removeIcon} />}
     </div>
     <div className={shoppingListStyles.details}>
       <div className={shoppingListStyles.details__header}>
         <h3>{props.prod.name}</h3>
-        <img src={removeIcon} alt="" onClick={handleRemove} />
+        {!tabletDisplay && <img src={removeIcon} alt="" onClick={handleRemove} />}
       </div>
       <div className={shoppingListStyles.details__content} >
         <p className={shoppingListStyles.details__price}>${props.prod.price.toFixed(2)}</p>

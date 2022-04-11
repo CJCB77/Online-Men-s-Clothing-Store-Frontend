@@ -1,5 +1,5 @@
 .suggestions { 
-  padding: 0 4rem;
+  padding: 0 6rem;
   font-size: 1.8rem;
   color: #545269;
   margin-bottom: 5rem;
@@ -10,6 +10,7 @@
   font-weight: 700;
   margin-top: 10rem;
   margin-bottom: 2rem;
+  margin-left: 1.5rem;
 }
 
 .suggestions article {
@@ -33,6 +34,7 @@
   .suggestions h3 {
     font-size: 2rem;
     margin-bottom: 1rem;
+
   }
 
   .suggestions article h4 {

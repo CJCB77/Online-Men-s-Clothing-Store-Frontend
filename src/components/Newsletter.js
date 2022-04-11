@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import newsletterStyles from "../styles/newsletter.module.css"
 import send from "../imgs/send.svg"
 
-export default function Newsletter() {
+export default function Newsletter(props) {
 
   const [email, setEmail] = useState("")
   
@@ -19,7 +19,8 @@ export default function Newsletter() {
   }  
 
   return (
-    <section className={newsletterStyles.newsletter}>
+    <section className={newsletterStyles.newsletter} 
+          style={props.light ? {backgroundColor:"#FAF9F8"} : {backgroundColor:"#F3EFEA"}}>
         <h1>Join Our Newsletter!</h1>
         <h2>Get timely updates for discounts or new products.</h2>
         
