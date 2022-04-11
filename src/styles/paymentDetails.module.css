@@ -1,0 +1,111 @@
+.checkout {
+  width: 50%;
+}
+
+.details {
+  background-color: #fff;
+  font-size: 2.4rem;
+  width: 100%;
+  padding: 3rem;
+  box-shadow: 2px 3px 3px 1px rgba(0, 0, 0, 0.075);
+  color: #4A485F;
+  position: sticky;
+  top: 0;
+
+}
+
+.details hr {
+  margin: 0;
+}
+
+.details__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.details__header h2 {
+  font-size: 3.6rem;
+}
+
+.details__header span {
+  display: block;
+  font-size: 1.8rem;
+  font-weight: 300;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.details__body {
+  margin: 2.5rem 0;
+}
+
+.details__body h5 {
+  font-size: 2rem;
+  font-weight: 400;
+}
+
+.details__body p {
+  font-size: 2rem;
+  font-weight: 400;
+}
+
+.details__row {
+  margin: 1rem 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.details__body :nth-child(2) h5 {
+  color: #6C9A8B ;
+}
+
+.details__body :nth-child(3) h5 {
+  color: #D09C74;
+}
+
+.details__total {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 1.5rem 0;
+}
+
+.details__total h5 {
+  font-size: 2.4rem;
+  font-weight: 500;
+}
+
+.details__total p {
+  font-size: 2.4rem;
+  font-weight: 500;
+}
+
+.button__wrap {
+  display: flex;
+  justify-content: center;
+  margin-top: 5rem;
+}
+
+.details button {
+  width: 100%;
+  padding: 2rem 0;
+  background-color: #72BCA4;
+  border: none;
+  border-radius: 3px;
+  color: #fff;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+.payment__option {
+  margin: 2rem 0;
+}
+
+.payment__option h4 {
+  margin: 1rem 0;
+  font-weight: 400;
+  font-size: 2.4rem;
+}

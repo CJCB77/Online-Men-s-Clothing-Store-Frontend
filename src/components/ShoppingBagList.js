@@ -9,16 +9,20 @@ import removeIcon from "../imgs/icons/remove.svg"
 // Max item number
 const MAX_QTY = 10
 
+function handleRemove() {
+  console.log("Removed Item")
+}
+
 function BagItem(props) {
   return(
-    <article className={shoppingListStyles.item}>
+  <article className={shoppingListStyles.item}>
     <div className={shoppingListStyles.item__img}>
       <img src={props.prod.img} alt="" />
     </div>
     <div className={shoppingListStyles.details}>
       <div className={shoppingListStyles.details__header}>
         <h3>{props.prod.name}</h3>
-        <img src={removeIcon} alt="" />
+        <img src={removeIcon} alt="" onClick={handleRemove} />
       </div>
       <div className={shoppingListStyles.details__content} >
         <p className={shoppingListStyles.details__price}>${props.prod.price.toFixed(2)}</p>
@@ -45,7 +49,7 @@ export default function ShoppingBagList() {
   
   const myShoppingCart = products.slice(0,4).map((prod) => {
     return(
-      <BagItem availableQty={availableQty} prod={prod} />
+      <BagItem key={prod.id} availableQty={availableQty} prod={prod} />
     )
   })
 
